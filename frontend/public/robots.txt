@@ -1,0 +1,15 @@
+# The Community Path Project - Robots.txt
+# https://the-community-path-project.vercel.app
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /dashboard
+
+# Sitemap location
+Sitemap: https://the-community-path-project.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

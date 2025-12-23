@@ -1,0 +1,500 @@
+/* =========================================
+   1. ACTIVATE TAILWIND (Required for Home)
+   ========================================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   2. GLOBAL RESET
+   ========================================= */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  background-color: #ffffff;
+
+  /* Standardized Shadow Levels (Design System) */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- PREMIUM SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  /* Gray-300 default */
+  border-radius: 5px;
+  border: 2px solid #f9fafb;
+  /* Padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #111827;
+  /* Gray-900 on hover */
+}
+
+/* --- BRANDED SELECTION --- */
+::selection {
+  background: #10B981;
+  /* Emerald-500 */
+  color: white;
+  /* White text */
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Use Flexbox to center the Login/Signup cards vertically */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make the root container fill height to allow centering */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   3. AUTH PAGE STYLES (Login & Signup)
+   ========================================= */
+/* We scope these styles to ".card" so they don't break the Home page */
+
+.card {
+  background-color: white;
+  width: 100%;
+  max-width: 450px;
+  /* Professional Width */
+  padding: 2.5rem;
+  margin: auto;
+  /* This centers the card vertically & horizontally */
+
+  /* The "Amazon" Border Look */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* --- LOGO IN CARD --- */
+.card .logo {
+  height: 4em;
+  width: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+/* --- HEADINGS --- */
+.card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #198754;
+  /* Community Green */
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* --- LABELS --- */
+.card label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* --- INPUTS (Restoring the Borders) --- */
+.card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #999;
+  /* Visible Grey Border */
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.card input:focus {
+  outline: none;
+  border-color: #198754;
+  /* Green Focus */
+  box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.2);
+}
+
+/* --- BUTTONS (Solid Green) --- */
+.card button {
+  width: 100%;
+  background-color: #198754;
+  /* Community Green */
+  color: white;
+  border: 1px solid #198754;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.card button:hover {
+  background-color: #146c43;
+  /* Darker Green */
+}
+
+/* =========================================
+   10. NETWORK GRAPH ANIMATIONS
+   ========================================= */
+@keyframes dash-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 10;
+  stroke-dashoffset: 100;
+  animation: dash-draw 2s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+/* Glass Card Utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* --- PASSWORD EYE ICON --- */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+/* We target the button inside the password container specifically */
+.password-container .eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 38%;
+  transform: translateY(-50%);
+
+  /* Reset button styles for the icon so it doesn't look like a green block */
+  background: transparent !important;
+  border: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.eye-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #666;
+}
+
+/* --- LINKS --- */
+.card p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card a {
+  font-weight: 600;
+  color: #198754;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   4. MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 600px) {
+  .card {
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 1.5rem;
+  }
+}
+
+/* =========================================
+   5. HERO INNOVATION ANIMATIONS
+   ========================================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes morph {
+
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes sideways {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  5%,
+  95% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #111827
+  }
+
+  /* tailwind gray-900 */
+}
+
+.animate-cursor {
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blinkOpacity {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blinkOpacity 1s step-end infinite;
+}
+
+/* We ensure the Tailwind classes link to these keyframes */
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-morph {
+  animation: morph 8s ease-in-out infinite;
+}
+
+.animate-sideways {
+  animation: sideways 6s ease-in-out infinite;
+}
+
+/* =========================================
+   6. HERO IMAGE MASK
+   ========================================= */
+.hero-image-mask {
+  /* Mobile: Bottom fade for text readability */
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 95%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 95%);
+}
+
+@media (min-width: 768px) {
+  .hero-image-mask {
+    /* Desktop: Horizontal fade for 'Full-Surface' look */
+    -webkit-mask-image: linear-gradient(to right, transparent 5%, black 60%);
+    mask-image: linear-gradient(to right, transparent 5%, black 60%);
+  }
+}
+
+/* =========================================
+   7. LED MARQUEE SCROLLING ANIMATION
+   ========================================= */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 8s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================
+   8. ORBIT & FLOAT ANIMATIONS
+   ========================================= */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit-reverse 20s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}

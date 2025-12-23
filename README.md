@@ -1,108 +1,98 @@
-Perfect. Expanding the scope from **Ghanaian** to **Africa-wide** makes it **funder-friendly** and positions the platform as a scalable EdTech solution. I’ve updated the README accordingly, keeping the language clear, simple, and founder-safe.
-
----
-
 # **Community Path Project**
 
 > **A free EdTech guidance platform that helps students across Africa connect community challenges to meaningful academic pathways.**
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Platform](https://img.shields.io/badge/Platform-Web-blue)
-![Access](https://img.shields.io/badge/Access-Free-green)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://community-path.vercel.app)
+[![Platform](https://img.shields.io/badge/Platform-Web-blue)](https://community-path.vercel.app)
+[![Access](https://img.shields.io/badge/Access-Free-green)](https://community-path.vercel.app)
 
-The **Community Path Project** is a web-based guidance platform designed to help African SHS graduates make informed academic decisions by linking community problems, personal interests, and academic eligibility.
-
-The platform is free for users and focuses on clarity, accessibility, and real-world relevance.
+🔗 **[View Live Website](https://community-path.vercel.app)**
 
 ---
 
-## 🎯 Overview
+## 🎯 Project Overview
 
-Many students in Africa choose academic programmes without a clear understanding of how their education can contribute to solving real problems in their communities.
+The **Community Path Project** is a web-based guidance platform designed to help African SHS graduates make informed academic decisions by linking community problems, personal interests, and academic eligibility.
 
-Community Path addresses this gap by providing structured guidance that helps users:
+The platform is **free for all users** and focuses on clarity, accessibility, and real-world relevance.
 
-* Reflect on issues affecting their communities
-* Understand how different academic pathways relate to those issues
-* Make realistic choices based on academic eligibility
+---
+
+## 💡 What We Offer
+
+Community Path addresses the gap between education and community impact by providing structured guidance that helps users:
+
+- ✅ Reflect on issues affecting their communities
+- ✅ Understand how different academic pathways relate to those issues
+- ✅ Make realistic choices based on academic eligibility
 
 The goal is to support **purpose-driven education choices**, not to replace formal admissions processes.
 
 ---
 
-## 💡 What the Platform Provides
-
-* Guided reflection on community challenges
-* Structured academic pathway suggestions
-* Consideration of academic performance in recommendations
-* Clear, user-friendly guidance for decision-making
-
-All recommendations are provided as **guidance**, not guarantees.
-
----
-
 ## ✨ Key Features
 
-### 🔐 User Access
-
-* Secure user accounts
-* Simple onboarding experience
-* Personal dashboards
-
-### 🎯 Guidance & Matching
-
-* Purpose-driven academic guidance
-* Programme suggestions aligned with user input
-* Context-aware recommendations
-
-### 💻 Web Interface
-
-* Fully responsive design
-* Optimized for accessibility and low-bandwidth use
-* Works across modern devices
+| Feature | Description |
+|---------|-------------|
+| 🔐 **Secure User Accounts** | Personal dashboards with simple onboarding |
+| 🎯 **Purpose-Driven Guidance** | Academic suggestions aligned with user input |
+| 🌍 **Africa-Wide Coverage** | Designed for students across the continent |
+| 💻 **Responsive Design** | Optimized for accessibility and low-bandwidth use |
 
 ---
 
-## 🧩 Platform Design (High-Level)
+## 🚀 For Funders & Stakeholders
 
-The platform operates as a modern web application with:
+Community Path is built with sustainability and impact in mind:
 
-* A user-facing interface for interaction
-* A secure backend that processes user input
-* Structured data storage for user sessions and guidance outcomes
+- **Mission-Aligned**: Connecting education with community development
+- **Scalable**: Cloud-based infrastructure ready for continental expansion
+- **Accessible**: Free-to-use platform removing financial barriers
+- **Data-Driven**: Structured approach to measuring educational outcomes
 
-Specific implementation details are intentionally not disclosed.
+**Who Benefits:**
+- Students exploring academic options across Africa
+- Educators and mentors supporting guidance
+- Stakeholders interested in education-to-impact alignment
 
 ---
 
 ## 🛠 Technology Overview
 
-The platform is built using modern web technologies to ensure reliability, scalability, and maintainability.
+Modern web technologies ensuring reliability, scalability, and maintainability:
 
-* Web-based frontend
-* API-driven backend
-* Secure data handling practices
-* Cloud deployment for availability
+- 🌐 React-based frontend with responsive design
+- ☁️ Cloud deployment for high availability
+- 🔒 Secure data handling practices
+- ⚡ Optimized for low-bandwidth environments
 
 ---
 
-## 🚀 Availability
+## 💻 Running the Frontend Locally (Demo Mode)
 
-The Community Path Project is live and accessible online.
+This public repository contains the frontend skeleton with UI components. To run locally:
 
-It is designed for:
+```bash
+# Navigate to frontend folder
+cd frontend
 
-* Students exploring academic options across Africa
-* Educators and mentors supporting guidance
-* Stakeholders interested in education-to-impact alignment
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+> **Note:** The frontend requires backend API integration for full functionality. This demo showcases the UI/UX design and component structure.
 
 ---
 
 ## ⚠️ Important Notes
 
-* The platform is provided as a **guidance tool**
-* Academic outcomes depend on official admission processes
-* The project is not affiliated with any examination or admissions body
+- This platform is provided as a **guidance tool**
+- Academic outcomes depend on official admission processes
+- The project is not affiliated with any examination or admissions body
+- Backend logic and matching algorithms are proprietary
 
 ---
 
@@ -110,27 +100,23 @@ It is designed for:
 
 Planned improvements include:
 
-* Expanded academic coverage across African countries
-* Enhanced guidance features
-* Broader accessibility options
-* Additional support tools for students
+- 🌍 Expanded academic coverage across African countries
+- 🎓 Enhanced guidance features
+- ♿ Broader accessibility options
+- 📱 Mobile applications
 
 ---
 
-## 📄 Use & Rights
+## 📄 License & Rights
 
 © 2025 Community Path Project. All rights reserved.
 
-This platform is free to use.
-The underlying system design, logic, and methodologies are proprietary and may not be copied, reproduced, or reused without written permission.
+This platform is free to use. The underlying system design, logic, and methodologies are proprietary and may not be copied, reproduced, or reused without written permission.
 
 ---
 
 ## 👥 About
 
-**Community Path Project**
-The Community Path is built with you in mind; for you, and for the communities your education is meant to serve.
+**Community Path Project** — Built with you in mind; for you, and for the communities your education is meant to serve.
 
----
-
-
+🔗 **Live Website:** [https://community-path.vercel.app](https://community-path.vercel.app)
